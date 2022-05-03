@@ -33,8 +33,7 @@ export class TreasuryIssuedEntity extends Entity {
     if (id) {
       assert(
         id.kind == ValueKind.STRING,
-        "Cannot save TreasuryIssuedEntity entity with non-string ID. " +
-          'Considering using .toHex() to convert the "id" to a string.'
+        `Entities of type TreasuryIssuedEntity must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
       );
       store.set("TreasuryIssuedEntity", id.toString(), this);
     }
@@ -161,8 +160,7 @@ export class TreasuryPaidEntity extends Entity {
     if (id) {
       assert(
         id.kind == ValueKind.STRING,
-        "Cannot save TreasuryPaidEntity entity with non-string ID. " +
-          'Considering using .toHex() to convert the "id" to a string.'
+        `Entities of type TreasuryPaidEntity must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
       );
       store.set("TreasuryPaidEntity", id.toString(), this);
     }
@@ -310,8 +308,7 @@ export class TreasuryPurchasedEntity extends Entity {
     if (id) {
       assert(
         id.kind == ValueKind.STRING,
-        "Cannot save TreasuryPurchasedEntity entity with non-string ID. " +
-          'Considering using .toHex() to convert the "id" to a string.'
+        `Entities of type TreasuryPurchasedEntity must have an ID of type String but the id '${id.displayData()}' is of type ${id.displayKind()}`
       );
       store.set("TreasuryPurchasedEntity", id.toString(), this);
     }
